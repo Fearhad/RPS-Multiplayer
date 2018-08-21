@@ -11,6 +11,8 @@ body {
 .jumbotron {
     background-image: url(../images/paper.png);
     text-align: center;
+    height: 280px;
+    margin-top: 32px;
 }
 
 body {
@@ -18,14 +20,14 @@ body {
     text-align: center;
     margin: 0;
   }
-  p {
+  .title {
     text-transform: uppercase;
     letter-spacing: 0.5em;
     display: inline-block;
     padding: 1.5em 0em;
     
   }
-  p span {
+  .title span {
     letter-spacing: 0;
     padding: 0.25em 0 0.325em;
     display: block;
@@ -52,3 +54,39 @@ body {
     }
   }
   
+ .card-deck {
+     color: black;
+     text-align: center;
+     padding-left: 0px;
+     padding-right: 0px;
+     margin-left: 0px;
+     margin-right: 0px;
+     min-height: 300px;
+ }
+
+ .card-text {
+    padding: 0px;
+ }
+
+ .chat {
+     margin-top: 32px;
+     color: black;
+     text-align: left;
+     min-height: 226px;
+     
+ }
+
+#p1 {
+    margin-left: 0px;
+}
+
+#p2 {
+    margin-right: 0px;
+}
+
+ .row {
+     padding-left: 0px;
+     padding-right: 0px;
+     margin-left: 0px;
+     margin-right: 0px;
+ }
