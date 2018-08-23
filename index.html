@@ -12,6 +12,8 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Delius+Unicase" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
 
 </head>
 
@@ -20,42 +22,67 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="inner-container">
                 <p class="title">
-                <span class="display-4">ROCK PAPER SCISSORS</span>
+                    <span class="display-4">ROCK PAPER SCISSORS</span>
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="card-deck col-lg-12">
-                <div class="card" id="p1">                    
-                        <h4 class="card-header title"><span>Player 1</span></h4>
-                        <p class="card-text">Text</p>                    
+                <div class="card" id="p1">
+                    <h4 class="card-header title">
+                        <span>Player 1</span>
+                    </h4>
+                    <div id="player1">
+                        <p class="card-text">Enter your name</p>
+                        <input type="text" required>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-                <div class="card" id="results">                    
-                        <h4 class="card-header title"><span>Results</span></h4>
-                        <p class="card-text">Text</p>                    
+                <div class="card" id="results">
+                    <h4 class="card-header title">
+                        <span>Results</span>
+                    </h4>
+                    <p class="card-text">Text</p>
                 </div>
-                <div class="card" id="p2">                    
-                        <h4 class="card-header title"><span>Player 2</span></h4>
-                        <p class="card-text">Text</p>                    
+                <div class="card" id="p2">
+                    <h4 class="card-header title">
+                        <span>Player 2</span>
+                    </h4>
+                    <div id="player2">
+                            <p class="card-text">Enter your name</p>
+                            <input type="text" required>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                 </div>
             </div>
         </div>
         <div class="row">
-                <div class="card col-lg-12 chat">
-                        <h4 class="card-header p1 title"><span>Chat Window</span></h4>
-                        <p class="card-text">Text</p>   
+            <div class="card col-lg-12 chat">
+                <h4 class="card-header p1 title">
+                    <span>Chat Window</span>
+                </h4>
+                <div class="displayChat">
+                <textarea name="chatWindow" id="chatWindow" cols="95" rows="8"></textarea>
                 </div>
+                <form class="form-inline">
+                    <div class="form-group chatInput">                        
+                        <input type="text" name="chatInput" id="chat" class="form-control" placeholder="Chat here" required>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-    <script src="assets/scripts/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js " integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="
+                    anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js " integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em "
+        crossorigin="anonymous "></script>
+    <script src="assets/scripts/app.js "></script>
 </body>
 
 </html>
