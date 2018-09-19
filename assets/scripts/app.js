@@ -11,7 +11,7 @@
 
   var database = firebase.database();
   
-  // Player 1 variables
+// Player 1 variables
 var name1 = "";
 var p1select = "";
 var p1wins = 0;
@@ -27,7 +27,6 @@ var p2ties = 0;
 var p2losses = 0;
 var player2 = false;
 
-// Icon color assignments
 var rock1 = "white";
 var rock2 = "white";
 var paper1 = "white";
@@ -40,7 +39,7 @@ var chatarray = ["Chat with your opponent here!"];
 var chatindex = 0;
 var addchat = false;
 
-// Detect page refresh and remove the player who left
+// When page refreshes, remove the player who left the game
 $(window).on("unload", function() {
     if (player1 == true) {
        resetPlayerOne();
@@ -53,14 +52,14 @@ $(window).on("unload", function() {
     sendToDatabase();
 });
 
-// Default state: hide start button, selection menu, and scores
+// Init game
 $("#name-form").show();
 $("#p1select").hide();
 $("#p1score").hide();
 $("#p2select").hide();
 $("#p2score").hide();
 
-// Pull data from firebase
+// Read Firebase Data
 database.ref().on("value", function(snapshot) {
     console.log(snapshot.val());
     name1 = snapshot.val().name1;
@@ -86,14 +85,14 @@ database.ref().on("value", function(snapshot) {
     updateScreen();
     updateScores();
 
-    // Hide or display the start button depending on current players
+    // Display or hide start button
     if ((name1 == "" && player2 != true) || (name2 == "" && player1 != true)) {
         $("#name-form").show();
     } else {
         $("#name-form").hide();
     }
 
-    // Hide or display scores depending on current players
+    // Display or hide Score
     if (name1 == "" && player2 == true) {
         $("#p1score").hide();
     } else if (name2 == "" && player1 == true) {
@@ -108,7 +107,7 @@ database.ref().on("value", function(snapshot) {
     $("#scissors1").css("background-color", scissors1);
     $("#scissors2").css("background-color", scissors2);
 
-    // Populate chat
+    // Chat engine
     if (addchat == true) {
         for (var i = chatindex; i < chatarray.length; i++) {
             // create new chat line and add user input
@@ -124,12 +123,11 @@ database.ref().on("value", function(snapshot) {
     }
 });
 
-// Begin the game by adding your name
+
 $("#add-name").on("click", function(event) {
-    // prevents form from submitting
     event.preventDefault();
 
-    // Grabs user input and trims excess spaces
+   
     var name = $("#name-input").val().trim();
 
     if (name1 == "" && name2 == "") {
@@ -191,7 +189,7 @@ $("#send-chat").on("click", function(event) {
     chatindex++;
     addchat = true;
 
-    // Clears user input
+    // Reset chat form
     $("#chat-form").each(function() {
         this.reset();
     });
@@ -329,7 +327,7 @@ function runGame() {
     }
 }
 
-// Send data to firebase
+// Write data to firebase
 function sendToDatabase() {
     database.ref().set({
         name1: name1,
@@ -409,7 +407,7 @@ function showResult() {
         // Reset selections for next turn
         setTimeout(function() {
             $("#result").text("Waiting for players to choose!");
-            $("#middle").css("background-color", "black");
+            $("#middle").css("background-color", "#CCCCCC");
 
             // Reset selections
             p1select = "";

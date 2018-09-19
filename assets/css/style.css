@@ -127,9 +127,19 @@ body {
 #send-chat {
 	margin-left: 5px;
 	padding: 5px 5px;
-	background-color: #000000;
-	color: #0d900f;
-	margin-bottom: 5px;
+	background-color: #cccccc;
+	color: RED;
+    margin-bottom: 5px;
+    width: 100px;
+}
+
+#endGame {
+    margin-top: 20px;
+    
+}
+
+div#middle.playground, h2#result {
+    background-color: #CCCCCC;
 }
 
 .playground {
@@ -139,4 +149,8 @@ body {
 	border: none;
 	border-radius: 10px;
 	background-color: #cccccc;
+}
+
+#chat-input {
+    height: 100px;
 }

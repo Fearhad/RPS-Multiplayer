@@ -28,8 +28,7 @@
         </div>
         <div class="container">
 			<div class="row text-center justify-content-center"> <!-- Intructions -->
-				<h1>Rock, Paper, Scissors!</h1>
-				<p id="instructions">Submit your name to Start the game. Select either Rock, Paper, or Scissors icons when prompted. Your opponent will do the same. Rock beats Scissors, Scissors beats Paper, and Paper beats Rock. Good luck, and have Fun!</p>
+				<p id="instructions">Once two players have joined, you can select Rock, Paper or Scissors. You're oppenent will do the same and the winner will be revealed!</p>
 				<form id="name-form">
 				    <input type="text" id="name-input">
 				    <input id="add-name" type="submit" value="START GAME">
@@ -52,7 +51,7 @@
 
 				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
 					<div class="playground" id="middle">
-						<h2 id="result">Waiting on Player 1 and Player 2...</h2>
+						<h2 id="result">Waiting on Players</h2>
 					</div>
 				</div>
 
@@ -71,7 +70,7 @@
 
 			<div class="row text-center"> <!-- Chat Box -->
 				<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<div id="chat"><b>You can chat with your opponent here!</b></div>
+					<div id="chat"><b><p><span>[System]Welcome to RPS Multiplayer!</span></p></b></div>
 					<form id="chat-form">
 						<input type="text" id="chat-input"><input id="send-chat" type="submit" value="SEND">
 					</form>
@@ -79,7 +78,7 @@
 			</div>
 
 			<div class="row justify-content-center"> <!-- End game -->
-				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<div id="endGame" class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
 						<button>END GAME</button>
 				</div>
 			</div> 
